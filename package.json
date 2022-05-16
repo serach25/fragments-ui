@@ -1,0 +1,19 @@
+{
+  "name": "fragments-ui",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Fragments UI testing web app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/serach25/fragments-ui.git"
+  },
+  "author": "Serach Boes <saboes@myseneca.ca>",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "parcel": "^2.5.0"
+  }
+}
