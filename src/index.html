@@ -5,10 +5,20 @@
     <meta charset="utf-8"/>
     <title>Fragments-UI</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/bxl4alc.css">
+    <script type="module" src="./app.js"></script>
   </head>
   <body>
-    <h1>Fragments-UI</h1>
-    <button type="button">Login</button>
-    <button type="button">Logout</button>
+    <div class="login">
+        <h1>Welcome to Fragments-UI</h1>
+        <section>
+            <nav><button id="login">Login</button> <button id="logout">Logout</button></nav>
+          </section>
+          <section hidden id="user">
+            <h2>Hello <span class="username"></span>!</h2>
+          </section>
+    </div>    
   </body>
 </html>
+
+
