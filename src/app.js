@@ -2,13 +2,16 @@
 //It should use src/auth.js to handle authentication, get the user, and update the UI
 
 import { Auth, getUser } from './auth';
-import { getUserFragments } from './api';
+import { getUserFragments, postUserFragments } from './api';
+
 
 async function init() {
   // Get our UI elements
   const userSection = document.querySelector('#user');
   const loginBtn = document.querySelector('#login');
   const logoutBtn = document.querySelector('#logout');
+  const createBtn = document.querySelector('#create');
+  const getByIdBtn = document.querySelector('#get');
 
   // Wire up event handlers to deal with login and logout.
   loginBtn.onclick = () => {
@@ -34,6 +37,17 @@ async function init() {
   // Log the user info for debugging purposes
   console.log({ user });
   
+  createBtn.onclick = () => {
+    var input = document.getElementById('fragment').value;
+    console.log(input);
+    postUserFragments(user, input);
+  };
+
+  getByIdBtn.onclick = () => {
+    var input = document.getElementById('id').value;
+    console.log(input);
+    getFragmentById(user, input);
+  };
 
   // Update the UI to welcome the user
   userSection.hidden = false;
@@ -47,6 +61,10 @@ async function init() {
   // Do an authenticated request to the fragments API server and log the result
   getUserFragments(user);
 }
+
+
+
+ 
 
 // Wait for the DOM to be ready, then start the app
 addEventListener('DOMContentLoaded', init);
