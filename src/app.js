@@ -43,7 +43,7 @@ async function init() {
     var input = document.getElementById('fragment').value;
     console.log(input);
     console.log(selectedType.value);
-    await postUserFragments(user, input, selectedType.value);
+    await postUserFragments(user, JSON.stringify(input), selectedType.value);
   };
 
   getByIdBtn.onclick = () => {
