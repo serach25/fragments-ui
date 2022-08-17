@@ -12,13 +12,15 @@ body {
     font-family: niveau-grotesk, sans-serif;
     font-weight: 900;
     font-style: normal;
+    text-align: center;
   
 }
 
 .login { 
+  text-align: center;
     padding: 20px 20px 20px;
-    width: 25%;
-    height: 50%;
+    width: 50%;
+    height: 100%;
     background: white;
     border-radius: 3px;
     
